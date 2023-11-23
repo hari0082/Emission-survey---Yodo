@@ -1,23 +1,17 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import React from "react";
 import "./App.css";
+import InputComponent from "./components/InputComponent";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="min-h-screen flex-col items-center justify-center bg-gradient-to-b from-white to-green-700">
+      <header className="text-center p-8 m-8 font-bold text-2xl">
+        <h1>Website Carbon calculator</h1>
+      </header>
+      <div className="w-full">
+        <InputComponent />
       </div>
-      <h1>Vite + React</h1>
-    </>
+    </div>
   );
 }
 
