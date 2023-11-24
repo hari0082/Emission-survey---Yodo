@@ -1,17 +1,17 @@
 import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import InputComponent from "./components/InputComponent";
+import Layout from "./components/Layout";
 
 function App() {
   return (
-    <div className="min-h-screen flex-col items-center justify-center bg-gradient-to-b from-white to-green-700">
-      <header className="text-center p-8 m-8 font-bold text-2xl">
-        <h1>Website Carbon calculator</h1>
-      </header>
-      <div className="w-full">
+    <Router>
+      <div className="flex-col items-center justify-center min-h-screen body">
+        <Layout />
         <InputComponent />
       </div>
-    </div>
+    </Router>
   );
 }
 
